@@ -16,12 +16,171 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+body,html{
+  height: 100%;
+}
+*{
+  font-family: IranSans;
+}
+@font-face {
+  font-family: IranSans;
+  src: url('/fonts/IRANYekanBlack.ttf');
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: IranSans;
+  src: url('/fonts/IRANYekanBold.ttf');
+  font-weight: 700;
+}
+
+
+@font-face {
+  font-family: IranSans;
+  src: url('/fonts/IRANYekanExtraBold.ttf');
+  font-weight: 800;
+}
+
+
+@font-face {
+  font-family: IranSans;
+  src: url('/fonts/IRANYekan-Medium.ttf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: IranSans;
+  src: url('/fonts/IRANYekanRegular.ttf');
+  font-weight: 400;
+}
+@font-face {
+  font-family: IranSans;
+  src: url('/fonts/IRANYekanLight.ttf');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: IranSans;
+  src: url('/fonts/IRANYekanThin.ttf');
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Peyda-Medium";
+  font-style: normal;
+  src: url("/fonts/payda/Peyda-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Peyda-Black";
+  font-style: normal;
+  src: url("/fonts/payda/Peyda-Black.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Peyda-Bold";
+  font-style: normal;
+  src: url("/fonts/payda/Peyda-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Peyda-ExtraBold";
+  font-style: normal;
+  src: url("/fonts/payda/Peyda-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "peyda-extralight";
+  font-style: normal;
+  src: url("/fonts/payda/peyda-extralight.ttf") format("truetype");
+}@font-face {
+  font-family: "peyda-light";
+  font-style: normal;
+  src: url("/fonts/payda/peyda-light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Peyda-SemiBold";
+  font-style: normal;
+  src: url("/fonts/payda/Peyda-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Peyda-Thin";
+  font-style: normal;
+  src: url("/fonts/payda/Peyda-Thin.ttf") format("truetype");
+} 
+
+.shapeanim{
+  animation: changepos 10s infinite;
+}
+
+.imganim{
+  animation: upanim 3s infinite;
+}
+
+@keyframes upanim{
+  0%{
+    margin-bottom: 40px;
+  }
+  50%{
+    margin-bottom: 0px;
+  }
+  100%{
+    margin-bottom: 40px;
+  }
+}
+
+@keyframes changepos{
+  0% {
+    transform : translate(45px,45px);
+  }
+  50% {
+    transform: translate(55px,55px);
+  }
+  100% {
+    transform : translate(45px,45px);
+  }
+}
+
+.swiper {
+  height: 320px;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
+
+
+
+.transition-n{
+  transform:matrix(1, 0.9, 0, 1, 0, 0);
+	-webkit-transform:matrix(1, 0.9, 0, 1, 0, 0);
+	-ms-transform:matrix(1, 0.9, 0, 1, 0, 0)
+}
+
+.change-state-r{
+  animation-name: change-w-r;
+  animation-duration: 0.3s;
+}
+.change-state-l{
+  animation-name: change-w-l;
+  animation-duration: 0.6s;
+}
+
+@keyframes change-w-r{
+  0%{
+    margin-left: -10px;
+  }
+  100%{
+    margin-left: 5px;
+  }
+}
+
+@keyframes change-w-l{
+  0%{
+    margin-right: -10px;
+  }
+  100%{
+    margin-right: 10px;
+  }
 }
